@@ -1,0 +1,13 @@
+--Inserts data from "games_raw" into "games_dim_genres" and seperates the values with ";"
+--json_each() separates the list format from the column
+--TRIM() to eliminate spaces
+
+INSERT INTO games_dim_genres (genre_name)
+
+SELECT DISTINCT
+TRIM(value)
+
+FROM games_raw,
+json_each(
+'["' || REPLACE(genres,';','","') || '"]'
+);
