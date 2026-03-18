@@ -5,7 +5,9 @@ Exploratory analytics project analyzing trends in the entertainment industry usi
 
 This project analyzes trends across the entertainment industry, focusing on film box office performance and video game market dynamics.
 The analysis was developed as an end-to-end data analytics solution, including data cleaning, validation, dimensional modeling, and interactive dashboard creation using SQL and Power BI.
-Public datasets from Kaggle were used as the primary data source. The project was structured to simulate a client-oriented scenario, aiming to explore historical trends, analyze individual cases, and generate insights applicable to future creative decisions.
+Public datasets from Kaggle were used as the primary data source. 
+
+The project was structured to simulate a client-oriented scenario, aiming to explore historical trends, analyze individual cases, and generate insights applicable to future creative decisions.
 During the exploratory phase, the music dataset was excluded due to insufficient transparency in its origin and methodology. This decision was made to ensure that the analysis is based on reliable and well-documented data.
 
 ## Business Objective
