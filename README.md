@@ -90,7 +90,13 @@ Each stage of the pipeline ensures **data consistency**, **reliability**, and **
 
 ## Data Sources
 
+Every dataset was downloaded from **Kaggle**.
 
+[Films source](https://www.kaggle.com/datasets/aditya126/movies-box-office-dataset-2000-2024)
+
+[Games source](https://www.kaggle.com/datasets/nikdavis/steam-store-games)
+
+[Music source](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset/data)
 
 ## Data Cleaning & Modeling
 
