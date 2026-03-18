@@ -80,7 +80,13 @@ It allows users to explore relationships between price, popularity, and user rat
 
 ## Data Pipeline
 
+The project follows a structured analytical workflow:
 
+![Data Pipeline](images/pipeline.png)
+
+Each stage of the pipeline ensures **data consistency**, **reliability**, and **usability** for analysis. 
+
+**Raw datasets** are transformed into structured tables through **SQL-based cleaning** and **validation processes**. These tables are then modeled into a **dimensional schema** to support **efficient querying** and **accurate aggregation in Power BI dashboards**.
 
 ## Data Sources
 
