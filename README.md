@@ -4,7 +4,7 @@ Exploratory analytics project analyzing trends in the entertainment industry usi
 ## Project Overview
 
 This project analyzes trends across the entertainment industry, focusing on film box office performance and video game market dynamics.
-The analysis was developed as an **end-to-end data analytics solution**, including data cleaning, validation, dimensional modeling, and interactive dashboard creation using SQL and Power BI.
+The analysis was developed as an **end-to-end data analytics solution**, including data cleaning, validation, dimensional modeling, and interactive dashboard creation using SQL and Power BI (which can be found in the [powerbi/](https://github.com/lucasmerlino33/Entertainment-Industry-Analysis-through-Data-Cleaning-and-BI/tree/main/powerbi) directory).
 Public datasets from Kaggle were used as the primary data source. 
 
 The project was structured to simulate a **client-oriented scenario**, aiming to explore **historical trends**, analyze **individual cases**, and generate insights applicable to future creative **decisions**.
@@ -100,7 +100,7 @@ All datasets were obtained from **Kaggle**. These datasets are publicly availabl
 
 ## Data Cleaning & Modeling
 
-Several transformations were applied to prepare the datasets for analysis. All transformation steps are documented in the **sql/** directory to ensure reproducibility.
+Several transformations were applied to prepare the datasets for analysis. All transformation steps are documented in the [sql/](https://github.com/lucasmerlino33/Entertainment-Industry-Analysis-through-Data-Cleaning-and-BI/tree/main/sql) directory to ensure reproducibility.
 
 ![Data Cleanig & Modeling](images/data_model.png)
 
@@ -135,7 +135,7 @@ To ensure data reliability, several validation checks were performed throughout 
 - Identification of **duplicate records** and inconsistent entries
 - Basic sanity checks to detect **outliers or unrealistic values**
 
-These checks were implemented using SQL queries, documented in the **sql/** directory, and applied repeatedly during the data preparation phase.
+These checks were implemented using SQL queries, documented in the [sql/global/](https://github.com/lucasmerlino33/Entertainment-Industry-Analysis-through-Data-Cleaning-and-BI/tree/main/sql/global) directory, and applied repeatedly during the data preparation phase, along with the full SQL script schema to recreate all tables from scratch.
 
 ![Data Quality Checks](images/data_quality_checks.png)
 
@@ -152,10 +152,22 @@ Additionally, some limitations should be considered:
 
 - The datasets are **user-generated**, which may introduce biases or inaccuracies
 - The music dataset lacked sufficient transparency in its origin and methodology, leading to its exclusion from the final analysis
-- Games dataset was limited to information until 2018. An interesting comparison could be the gaming industry evolution during Pandemic
+- The games dataset is limited to data up to 2018. As a result, it does not capture the impact of the COVID-19 pandemic, which likely played a significant role in the industry's recent growth.
 - Film revenue reflects **current box office values**, which may not represent original historical performance
 - The dataset is **not exhaustive**, and results should be interpreted as indicative rather than definitive
 
 These constraints were taken into account when interpreting the results and drawing conclusions.
 
 ## Conclusions
+
+This project highlights how success in the entertainment industry is highly concentrated, with a small number of titles capturing the majority of revenue and audience attention across both films and video games.
+
+Despite differences between industries, similar patterns emerge: popularity is driven by a combination of visibility, genre appeal, and market reach rather than a single dominant factor such as price or frequency.
+
+The analysis also reinforces the importance of data quality and modeling decisions. Careful data cleaning, validation, and structuring were essential to ensure accurate insights and avoid misleading conclusions.
+
+Additionally, the project demonstrates how publicly available data can be transformed into a structured analytical solution, enabling meaningful exploration and supporting data-driven decision-making.
+
+Overall, this work reflects a complete analytical workflow, from raw data to actionable insights, with a strong focus on reliability, clarity, and business relevance.
+
+The findings suggest that understanding market dynamics in entertainment requires both robust data modeling and critical interpretation, as surface-level metrics alone are not sufficient to explain success.
