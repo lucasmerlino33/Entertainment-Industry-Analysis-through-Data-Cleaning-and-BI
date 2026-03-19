@@ -137,6 +137,8 @@ To ensure data reliability, several validation checks were performed throughout 
 
 These checks were implemented using SQL queries, documented in the **sql/** directory, and applied repeatedly during the data preparation phase.
 
+![Data Quality Checks](images/data_quality_checks.png)
+
 ## Challenges & Limitations
 
 Several challenges were encountered during the project:
