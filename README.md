@@ -1,5 +1,5 @@
 # Entertainment Industry Analysis through Data Cleaning and BI
-Exploratory analytics project analyzing trends in the entertainment industry using **SQL, Power BI, Excel, and Kaggle datasets**.  The final analysis focuses on **film and video games**, as the music dataset was excluded due to insufficient transparency in its source and methodology.
+Exploratory analytics project analyzing trends in the entertainment industry using **SQL, Power BI, Excel, Python VScode (for SQL documentation) and Kaggle datasets**.  The final analysis focuses on **film and video games**, as the music dataset was excluded due to insufficient transparency in its source and methodology.
 
 ## Project Overview
 
@@ -90,17 +90,38 @@ Each stage of the pipeline ensures **data consistency**, **reliability**, and **
 
 ## Data Sources
 
-Every dataset was downloaded from **Kaggle**.
+All datasets were obtained from **Kaggle**. These datasets are publicly available and created by users.
 
-[Films source](https://www.kaggle.com/datasets/aditya126/movies-box-office-dataset-2000-2024)
+- [Films source](https://www.kaggle.com/datasets/aditya126/movies-box-office-dataset-2000-2024): Data compiled from Box Office Mojo and the TMDB API (The Movie Database).
 
-[Games source](https://www.kaggle.com/datasets/nikdavis/steam-store-games)
+- [Games source](https://www.kaggle.com/datasets/nikdavis/steam-store-games): Data collected using Steam Store and SteamSpy APIs.
 
-[Music source](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset/data)
+- [Music source](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset/data): This dataset combines Spotify and YouTube metrics. However, its origin and data collection methodology are not clearly documented. Although excluded from the final analysis, it is included for reference as exploratory data analysis (EDA) was performed on it.
 
 ## Data Cleaning & Modeling
 
+Several transformations were applied to prepare the datasets for analysis. All transformation steps are documented in the **sql/** directory to ensure reproducibility.
 
+Key processes included:
+
+- Creation of **primary and foreign keys**
+- **Removal of formatting** elements such as currency symbols and percentage signs
+- **Conversion** of text-based numerical values into numeric formats
+- Handling of missing (**NULL**) or inconsistent values
+- **Standardization** of column names and data types, including removal of unnecessary fields
+- **Splitting of multi-value fields** (e.g., genres, countries, developers) into normalized tables
+
+Additionally, **character encoding** issues (e.g., Latin-1 to UTF-8) were resolved using **Python** to ensure data consistency.
+
+The cleaned data was structured using a dimensional modeling approach:
+
+- **Films dataset** → main table with supporting bridge tables for genres and production countries  
+- **Games dataset** → star schema with a fact table and multiple dimension tables (developers, publishers, genres, platforms, categories), including bridge tables  
+- **Music dataset** → fully modeled star schema, later excluded from analysis due to data reliability concerns  
+
+This structure ensures **accurate aggregations** and **supports flexible analysis** in Power BI.
+
+The modeling approach follows **common data warehousing practices**, enabling scalable and consistent analytical queries.
 
 ## Data Quality Checks
 
