@@ -102,6 +102,8 @@ All datasets were obtained from **Kaggle**. These datasets are publicly availabl
 
 Several transformations were applied to prepare the datasets for analysis. All transformation steps are documented in the **sql/** directory to ensure reproducibility.
 
+![Data Cleanig & Modeling](images/data_model.png)
+
 Key processes included:
 
 - Creation of **primary and foreign keys**
@@ -125,10 +127,33 @@ The modeling approach follows **common data warehousing practices**, enabling sc
 
 ## Data Quality Checks
 
+To ensure data reliability, several validation checks were performed throughout the transformation process:
 
+- Verification of **row count consistency** between raw and transformed tables
+- Detection of **NULL or missing values** in key fields
+- Validation of **referential integrity** between fact and dimension tables
+- Identification of **duplicate records** and inconsistent entries
+- Basic sanity checks to detect **outliers or unrealistic values**
+
+These checks were implemented using SQL queries, documented in the **sql/** directory, and applied repeatedly during the data preparation phase.
 
 ## Challenges & Limitations
 
+Several challenges were encountered during the project:
 
+- **Inconsistent formatting** across datasets (e.g., currency symbols, encoding issues), requiring additional cleaning steps
+- Presence of **multi-value fields** stored as text, which required normalization into separate tables
+- Lack of **unique identifiers** in some datasets, requiring the creation of surrogate keys
+- Estimated values (e.g., game ownership ranges), which required approximation methods for analysis
+
+Additionally, some limitations should be considered:
+
+- The datasets are **user-generated**, which may introduce biases or inaccuracies
+- The music dataset lacked sufficient transparency in its origin and methodology, leading to its exclusion from the final analysis
+- Games dataset was limited to information until 2018. An interesting comparison could be the gaming industry evolution during Pandemic
+- Film revenue reflects **current box office values**, which may not represent original historical performance
+- The dataset is **not exhaustive**, and results should be interpreted as indicative rather than definitive
+
+These constraints were taken into account when interpreting the results and drawing conclusions.
 
 ## Conclusions
